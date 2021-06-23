@@ -24,10 +24,16 @@
 // Given a string s, return true if s is a valid number.
 
 function isNumber(s) {
-    
+    return isNaN(s) | s.includes('Infinity') ? false : true  
 } 
 
 console.log(isNumber('0'))
 console.log(isNumber('e'))
 console.log(isNumber('.'))
 console.log(isNumber('.1'))
+console.log(isNumber('-.1'))
+console.log(isNumber('+-1'))
+console.log(isNumber('2e10'))
+console.log(isNumber('3e+7'))
+console.log(isNumber('e3'))
+console.log(isNumber('Infinity'))
